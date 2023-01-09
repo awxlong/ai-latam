@@ -40,6 +40,23 @@ public class Funciones {
         return acumulador; 
     }
     
+    public static int[] RevertirArreglo(int[] miArregloOriginal){
+        // 1. inicializar un arreglo de mismo tamaño
+        int[] miArregloRevertido = new int[miArregloOriginal.length];
+        
+        
+        // 2. Llenarlo de manera al revés
+        int indice = miArregloRevertido.length - 1;
+        //System.out.print(indice);
+        for (int contador = 0; contador < miArregloRevertido.length; contador ++ ) {    
+            miArregloRevertido[contador] = miArregloOriginal[indice ];
+            //System.out.print(miArregloRevertido[contador]);
+            indice -= 1;
+        }
+        return miArregloRevertido;
+
+    }
+    
     public static void ChequeoPar (int entero){
         // si el numero es par
         if (entero % 2 == 0) {  // primera condicion
